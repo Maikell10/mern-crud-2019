@@ -75,7 +75,9 @@ export default class CreateNote extends Component {
         return (
             <div className="col-md-6 offset-md-3">
                 <div className="card card-body">
-                    <h4>Create a Note</h4>
+                    {
+                        this.state.editing ? <h4>Edit this Note</h4> : <h4>Create a Note</h4>
+                    }
                     <form onSubmit={this.onSubmit}>
                         {/* SELECT THE USER */}
                         <div className="form-group">
